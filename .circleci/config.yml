@@ -7,18 +7,18 @@ jobs:
     working_directory: ~/repo
 
     steps:
-     
+      # Step 1: obtain repo from GitHub
       - checkout
-      
+      # Step 2: create virtual env and install dependencies
       - run:
           name: install dependencies
           command: |
-            python -m venv venv
+            python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-      
+      # Step 3: run linter and tests
       - run:
           name: run tests
           command: |
             . venv/bin/activate
-            python manage.py test
+            python3 manage.py test
