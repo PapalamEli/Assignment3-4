@@ -1,5 +1,5 @@
 os: windows # => 1
-language: python # => 2
+language: sh # => 2
 python: # => 3
   - "3.7"
   - "3.8"
