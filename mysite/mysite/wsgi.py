@@ -12,7 +12,7 @@ import sys
 
 from django.core.wsgi import get_wsgi_application
 
-path = r'C:\Users\papal\Documents\Software-testing-assignment3-4'
+path = r'C:\Users\papal\Documents\Software-testing-assignment3-4\mysite'
 sys.path.append(path)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
