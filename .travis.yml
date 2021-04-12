@@ -9,6 +9,8 @@ env: # => 5
 before_install:
   - choco install python3
   - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
+  - virtualenv $HOME/venv
+  - source $HOME/venv/Scripts/activate
   - python -m pip install -r requirements.txt
 #install: # => 6
 #  - pip install -r requirements.txt
