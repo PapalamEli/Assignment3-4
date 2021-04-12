@@ -12,6 +12,13 @@ jobs:
      
       - checkout
       #- python/install-packages
+      
+      - run:
+          name: Install Python dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
       - run:
           name: run tests
           command: |
