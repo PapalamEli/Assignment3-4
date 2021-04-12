@@ -8,8 +8,12 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
 from django.core.wsgi import get_wsgi_application
+
+path = r'C:\Users\papal\Documents\Software-testing-assignment3-4'
+sys.path.append(path)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 
