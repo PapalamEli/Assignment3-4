@@ -42,10 +42,10 @@ jobs:
             . venv/bin/activate
             python3 manage.py test
        
-       - run:
-          name: "echo an env var that is part of our project"
-          command: |
-            echo $Path
+      - run:
+         name: "echo an env var that is part of our project"
+         command: |
+           echo $Path
       
       
       - store_test_results:
