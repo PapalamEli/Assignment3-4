@@ -16,7 +16,7 @@ jobs:
       - browser-tools/install-browser-tools
 orbs:
   browser-tools: circleci/browser-tools@x.y
-version: 2.1
+
 
     #working_directory: ~/Assignment3-4
 
