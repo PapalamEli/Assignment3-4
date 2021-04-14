@@ -45,7 +45,7 @@ jobs:
       - run:
          name: "echo an env var that is part of our project"
          command: |
-           echo $Path
+           echo $PATH
       
       
       - store_test_results:
