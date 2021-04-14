@@ -15,7 +15,7 @@ jobs:
       #- python/install-packages
       
       - run: mkdir test-reports
-      - run: pip install java
+      - run: pip install install-jdk
       - run:
           name: Download Selenium
           command: |
