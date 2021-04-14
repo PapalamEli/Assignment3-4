@@ -1,14 +1,12 @@
 version: 2.1
 orbs:
   python: circleci/python@0.2.1
-  browser-tools: circleci/browser-tools@<<pipeline.parameters.dev-orb-version>>
-  orb-tools: circleci/orb-tools@9.1
 jobs:
   build:
     docker:
       - image: cimg/python:3.9.2
       - image: circleci/python:3.6.2-stretch-browsers
-      - image: 'cimg/node:13.12-browser'
+      - image: cimg/node:13.12-browser
 
 
 
