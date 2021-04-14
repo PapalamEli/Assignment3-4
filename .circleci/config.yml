@@ -4,7 +4,8 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/python:3.9.2-stretch-browsers
+      - image: cimg/python:3.9.2
+      - image: circleci/python:3.6.2-stretch-browsers
 
     #working_directory: ~/Assignment3-4
 
