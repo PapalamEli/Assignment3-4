@@ -1,0 +1,69 @@
+version: 2.1
+orbs:
+  python: circleci/python@0.2.1
+jobs:
+  build:
+    docker:
+      #- image: cimg/python:3.9.2
+      - image: circleci/python:3.6.2-stretch-browsers
+
+
+
+    #working_directory: ~/Assignment3-4
+
+    steps:
+     
+      - checkout
+      #- python/install-packages
+      
+      - run: mkdir test-reports
+      - run:
+          name: Download Selenium
+          command: |
+            
+            curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
+      
+      - run:
+          name: Start Selenium
+          command: |
+            #pip install install-jdk
+            java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
+          background: true
+      
+      - run:
+          name: Install Python dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            python3 manage.py test
+       
+     # - run:
+       #  name: "echo an env var that is part of our project"
+        # command: |
+         #  echo $PATH
+      
+      
+      - store_test_results:
+         path: test-results
+      
+      #- store_artifacts:
+        #path: test-results
+        #destination: tr1
+     
+          #name: install dependencies
+          #command: |
+            #python -m venv venv
+            #. venv/bin/activate
+            #pip install -r requirements.txt
+     
+      #- run:
+          #name: run tests
+          #command: |
+            #. venv/bin/activate
+            
+            #python manage.py test

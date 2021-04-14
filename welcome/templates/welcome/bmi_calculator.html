@@ -1,0 +1,25 @@
+{% block content %}
+
+<h1>BMI Calculator</h1>
+
+<br/>
+<br/>
+
+<form action="" method="POST">
+    
+
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" name="submit" required id ="id_submit">Submit</button>
+    
+    <p><a href="{% url 'welcome:home' %}">Home</a></p>
+    <h3>{{results}}</h3>
+
+</form>
+
+<br/>
+
+
+
+{% endblock %}
