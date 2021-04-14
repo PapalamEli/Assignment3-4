@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Download Selenium
           command: |
-            pip install install-jdk
+            
             curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
       
       - run:
