@@ -11,14 +11,15 @@
     {% csrf_token %}
     {{ form.as_p }}
 
-    <button type="submit" name="submit">Submit</button>
+    <button type="submit" name="submit" required id ="id_submit">Submit</button>
     
     <p><a href="{% url 'welcome:home' %}">Home</a></p>
-    
+    <h3>{{results}}</h3>
+
 </form>
 
 <br/>
 
-<h3>{{results}}</h3>
+
 
 {% endblock %}
