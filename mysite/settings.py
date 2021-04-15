@@ -25,7 +25,7 @@ SECRET_KEY = 'ti#c!=%wsjw%b)y+vlaba!p-3z&xq_8bz4of&+ivhq+8f^koyy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['assignment3-4-310722.ue.r.appspot.com']
 
 
 # Application definition
