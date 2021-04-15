@@ -97,7 +97,7 @@ class TestUrls(TestCase):
         url = reverse('welcome:retire')
         self.assertEquals(resolve(url).func, retirement)
 
-""" class TestFrontEnd(LiveServerTestCase):
+class TestFrontEnd(LiveServerTestCase):
 
     def testBMI(self):
         selenium = webdriver.Firefox()
@@ -140,4 +140,4 @@ class TestUrls(TestCase):
         submit.click()
 
         assert 'Goal will be met at age: 27' in selenium.page_source
-         """
+        
